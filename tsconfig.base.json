@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules",
+                "options": {
+                    "customMatcher": "\\.(sa|sc)ss$",
+                    "rendererOptions": {
+                        "sass": {
+                            "includePaths": ["src/styles"] // contains `@mixins` definitions, which are imported with `@use`
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "include": ["**/*.d.ts"],
+    "exclude": ["node_modules"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}
