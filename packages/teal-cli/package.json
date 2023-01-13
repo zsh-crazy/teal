@@ -1,0 +1,31 @@
+{
+    "name": "@teal/cli",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "bin": {
+        "teal": "bin/index.js"
+    },
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development rollup -c --watch --bundleConfigAsCjs",
+        "build": "cross-env NODE_ENV=production rollup -c"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.2.1",
+        "commander": "^9.4.1",
+        "dotenv": "^16.0.3",
+        "download-git-repo": "^3.0.2",
+        "import-local": "^3.1.0",
+        "inquirer": "^9.1.4",
+        "listr": "^0.14.3",
+        "minimist": "^1.2.7",
+        "npmlog": "^7.0.1",
+        "ora": "^6.1.2",
+        "semver": "^7.3.8",
+        "teal-node-utils": "^2.0.1"
+    }
+}

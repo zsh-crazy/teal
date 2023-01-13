@@ -3,17 +3,16 @@
         "target": "ESNext",
         "useDefineForClassFields": true,
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "allowJs": false,
-        "skipLibCheck": true,
-        "esModuleInterop": false,
         "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "ESNext",
-        "moduleResolution": "Node",
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": false,
         "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
         "plugins": [
             {
                 "name": "typescript-plugin-css-modules",
@@ -28,7 +27,6 @@
             }
         ]
     },
-    "include": ["**/*.d.ts"],
     "exclude": ["node_modules"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
