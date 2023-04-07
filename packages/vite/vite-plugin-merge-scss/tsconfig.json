@@ -1,0 +1,24 @@
+{
+    "extends": "../../../tsconfig.root.json",
+    "compilerOptions": {
+        "target": "ES6",
+        "lib": ["ES6", "dom"],
+        "allowJs": true,
+        "noImplicitAny": false,
+        "moduleResolution": "Node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationDir": "types",
+        "typeRoots": ["node_modules/@types"],
+        "outDir": ".",
+        "types": ["node"],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}

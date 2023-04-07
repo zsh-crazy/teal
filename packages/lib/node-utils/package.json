@@ -1,0 +1,19 @@
+{
+    "name": "tuck-node-utils",
+    "version": "0.0.1",
+    "description": "",
+    "main": "dist/index.js",
+    "module": "dist/index-esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development rollup -c --watch --bundleConfigAsCjs",
+        "build": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zsh-crazy/node-utils.git"
+    },
+    "author": "",
+    "license": "ISC"
+}

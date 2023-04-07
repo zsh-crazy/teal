@@ -1,6 +1,6 @@
 import { version } from '../../package.json';
 import chalk from 'chalk';
-import { rootCheck, userHome, pathExists } from 'teal-node-utils';
+import { rootCheck, userHome, pathExists } from 'tuck-node-utils';
 
 import { NODELOWERVERSION } from '@/constant/index';
 
@@ -26,9 +26,11 @@ export const checkUserHome = () => {
     }
 };
 
-export const preCheck = () => {
-    checkPkgVersion();
-    checkNodeVersion();
-    rootCheck();
-    checkUserHome();
-};
+const prepareHook = [
+    checkPkgVersion,
+    checkNodeVersion,
+    rootCheck,
+    checkUserHome
+];
+
+export default prepareHook;

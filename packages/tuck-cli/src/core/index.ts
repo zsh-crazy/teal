@@ -1,6 +1,6 @@
-import { preCheck } from './prepare';
+import prepareHook from './prepare';
 import { registryCommand } from './commander';
 export const init = () => {
-    preCheck();
+    prepareHook.forEach((fn) => fn());
     registryCommand();
 };

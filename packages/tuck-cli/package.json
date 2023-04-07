@@ -1,24 +1,31 @@
 {
-    "name": "@teal/cli",
+    "name": "tuck-cli",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/index.js",
+    "main": "bin/index.js",
     "types": "dist/index.d.ts",
-    "bin": {
-        "teal": "bin/index.js"
-    },
     "scripts": {
         "dev": "cross-env NODE_ENV=development rollup -c --watch --bundleConfigAsCjs",
-        "build": "cross-env NODE_ENV=production rollup -c"
+        "build": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs"
+    },
+    "bin": {
+        "tuck-cli": "bin/index.js"
+    },
+    "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "require": "./bin/index.js"
+        },
+        "./bin/*": "./bin/*"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "axios": "^1.2.1",
+        "chalk": "^5.2.0",
         "commander": "^9.4.1",
         "dotenv": "^16.0.3",
-        "download-git-repo": "^3.0.2",
         "import-local": "^3.1.0",
         "inquirer": "^9.1.4",
         "listr": "^0.14.3",
@@ -26,6 +33,11 @@
         "npmlog": "^7.0.1",
         "ora": "^6.1.2",
         "semver": "^7.3.8",
-        "teal-node-utils": "^2.0.1"
+        "simple-git": "^3.17.0",
+        "tuck-node-utils": "workspace:^*"
+    },
+
+    "devDependencies": {
+        "@types/inquirer": "^9.0.3"
     }
 }

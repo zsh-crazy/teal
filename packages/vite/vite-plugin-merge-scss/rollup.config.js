@@ -8,7 +8,6 @@ import { resolve } from 'path';
 import dts from 'rollup-plugin-dts';
 import del from 'rollup-plugin-delete';
 import alias from 'rollup-plugin-alias';
-
 export default [
     {
         input: './src/index.ts',

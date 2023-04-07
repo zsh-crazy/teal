@@ -9,7 +9,7 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "@teal/cli": "workspace:*"
+    "devDependencies": {
+        "tuck-cli": "workspace:^1.0.0"
     }
 }
